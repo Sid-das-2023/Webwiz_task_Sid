@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pagestyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+    <title>WebWiz Task</title>
+  </head>
+  <body>
+    <!-- Navbar section -->
+    <div class="navbar">
+      <nav>
+        <div class="logo">
+          ウェブウィズ
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Me</a></li>
+          <li><a href="#">More</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Header Section  -->
+    <div class="header">
+      <section>
+        <h1 id="heading">Hi, it's Sidhartha</h1>
+      </section>
+    </div>
+
+    <!-- Mid Section -->
+    <div class="para">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam cum,
+        doloribus quisquam ea illo commodi, odio quod quaerat cupiditate
+        aspernatur voluptatem deserunt? Magni quis, debitis autem totam et
+        maxime commodi!
+      </p>
+    </div>
+    <div class="buttons">
+      <button class="btn" id="btn1" onclick="alert('Welcome!!')">
+        Welcome
+      </button>
+      <button class="btn" id="btn2">Change BG</button>
+      <button class="btn" id="btn3">Change Heading</button>
+    </div>
+
+    <!-- Clock Section -->
+    <div class="clock">
+      <h1>Now Time is <span id="time"> </span></h1>
+      <h1>Today's Date is <span id="date"> </span></h1>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+      <footer>Thanks for Visiting the website.</footer>
+    </div>
+
+    <script>
+
+      // Changing the Background color 
+      let changeBg = document.getElementById("btn2");
+      changeBg.addEventListener("click", function () {
+        document.body.style.backgroundColor = "#2C2B30";
+      });
+
+
+      // Changing the Heading Text
+      let changeHeading = document.getElementById("btn3");
+      function changeHeader(){
+        document.getElementById("heading").innerText = "Welcome to Webwiz";
+      };
+      // Delaying it by 5 seconds
+      function changeDelay(){
+        setTimeout(changeHeader, 5000);
+      };
+      changeHeading.addEventListener("click", changeDelay);
+
+
+      // Displaying the Clock 
+      var Time = new Date().toLocaleTimeString();
+      console.log(Time);
+      document.getElementById("time").textContent = Time;
+
+      var Date = new Date().toLocaleDateString();
+      console.log(Date);
+      document.getElementById("date").textContent = Date;
+
+    </script>
+  </body>
+</html>
