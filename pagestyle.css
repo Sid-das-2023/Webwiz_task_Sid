@@ -5,7 +5,6 @@
 }
 nav {
   display: flex;
-  // deleted the width so that it can take the space of the viewport automatically
   justify-content: end;
   align-items: center;
   background-color: rgba(67, 69, 92, 0.46);
@@ -125,7 +124,6 @@ button:hover {
   transition: 200ms;
 }
 footer {
-   // deleted the width and the position so that it can take the space of the viewport automatically
   padding: 2vh;
   font-family: sans-serif;
   font-size: 1rem;
